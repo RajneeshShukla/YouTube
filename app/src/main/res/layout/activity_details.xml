@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.com.rajneesh.activities.VideoDetailsActivity">
+
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtube_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/video_player_id" />
+
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/video_description_height"
+        android:layout_below="@+id/youtube_player"
+        android:background="@color/video_des_background_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="@dimen/video_des_width"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/video_des_margin_bottom"
+            android:layout_marginLeft="@dimen/video_des_margin_left"
+            android:layout_marginTop="@dimen/Video_des_margin_top"
+            android:maxLines="2"
+            android:text="Video title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/common_black_50"
+            android:textSize="@dimen/video_title_textSize" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:maxLines="1"
+            android:text="This is video Description"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/common_gray_txt"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:layout_width="@dimen/download_btn_width"
+            android:layout_height="@dimen/download_btn_height"
+            android:layout_marginTop="@dimen/download_btn_margin_top"
+            android:gravity="center"
+            android:onClick="downloadVideo"
+            android:src="@drawable/baseline_get_app_black_18dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textViewDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout"
+        android:layout_gravity="left"
+        android:layout_margin="@dimen/layout_margin"
+        android:maxLines="4"
+        android:text="this is video desciption in details"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/common_gray_txt"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDes"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FAVOURITE"
+            android:textColor="@color/colorAccent"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            android:text="COMMENTS"
+            android:textColor="@color/common_blue_bg" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mList_videos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <!--<ImageView-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginTop="155dp"-->
+    <!--android:layout_marginRight="20dp"-->
+    <!--android:onClick="playVideo"-->
+    <!--android:src="@drawable/play"/>-->
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/youtube_postlayout_margin_bottom"
+    android:background="@drawable/custom_border"
+    android:elevation="4dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/ImageThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/video_thumbnail_placeholder_color"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/video_time_margin"
+            android:singleLine="true"
+            android:text="video Published at"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/video_post_time_text_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/video_des_layout_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="video Title"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/video_title_text_size" />
+
+        <TextView
+            android:id="@+id/textViewDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="video description"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/video_des_text_size" />
+    </LinearLayout>
+
+</LinearLayout>

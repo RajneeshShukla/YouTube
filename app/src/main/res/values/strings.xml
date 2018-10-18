@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">YouTube</string>
+
+    <!--Drawer Menu -->
+    <string name="home">Home</string>
+    <string name="saved_videos">Playlist</string>
+
+    <!--Navigation drawer -->
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+</resources>
